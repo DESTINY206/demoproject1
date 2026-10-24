@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daybook – My Daily To-Do List</title>
+  <!-- Fonts (needs internet; falls back to system fonts offline) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Link to the CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="#about">Daybook</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#tasks">Tasks</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- About / hero section -->
+    <section id="about" class="hero">
+      <div class="date-tile">
+        <span id="month">Month</span>
+        <span id="day">00</span>
+      </div>
+      <div>
+        <h1>My Daily To-Do List</h1>
+        <p id="greeting">Plan your day, one task at a time.</p>
+      </div>
+    </section>
+
+    <!-- Tasks section -->
+    <section id="tasks" class="panel">
+      <h2>Today’s tasks</h2>
+
+      <div class="row">
+        <input type="text" id="taskInput" placeholder="What needs to be done?" aria-label="New task">
+        <button id="addBtn" class="primary">Add task</button>
+      </div>
+
+      <div class="filters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="active">To do</button>
+        <button class="filter" data-filter="done">Done</button>
+      </div>
+
+      <div class="bar"><div id="barFill"></div></div>
+      <p id="count" class="count">0 of 0 done</p>
+
+      <ul id="taskList"></ul>
+      <p id="empty" class="empty">Nothing here yet. Add your first task above.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made by Vishmitha .A</p>
+  </footer>
+
+  <!-- Link to the JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
